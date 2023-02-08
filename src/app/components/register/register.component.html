@@ -1,1 +1,40 @@
-<p>register works!</p>
+<div id="torso">
+    <form class="formulario">
+      <h1 class="login-title">Actualiza tu info</h1>
+          <div class="contenedor">
+              <div style="text-align: left; margin-top: -30px;"><h2 style="font-size: x-large;">Cuentanos más sobre tí</h2></div>
+              <div class="input-contenedor" style="border: 1px solid white;">
+                <textarea name="area" id="txtArea" cols="54.5" rows="8" style="resize:none; padding: 10px;" maxlength="500" class="form-control" [(ngModel)]="perfil.bio" required></textarea>
+                <span class="help-block">
+                  <p id="mensaje_ayuda" class="help-block">Cuerpo del mensaje de alerta</p>
+                </span>
+              </div>
+              <div style="text-align: left; margin-top: -10px;"><h2 style="font-size: x-large;">Tus redes sociales</h2></div>
+              <div class="input-contenedor">
+                <i class="fa-brands fa-facebook-f" id="icons-login"></i>
+                <input type="url" placeholder="https://www.facebook.com/" id="face" [(ngModel)]="perfil.face" name="ABC">
+              </div> 
+              <div class="input-contenedor">
+                <i class="fa-brands fa-instagram" id="icons-login"></i>
+                <input type="url" placeholder="https://www.instagram.com/" id="insta" [(ngModel)]="perfil.insta" name="ABC">
+              </div>
+              <div class="input-contenedor">
+                <i class="fa-brands fa-twitter" id="icons-login"></i>
+                <input type="url" placeholder="https://twitter.com/" id="twit" [(ngModel)]="perfil.twit" name="ABC">
+              </div>
+              <div class="input-contenedor">
+                  <i class="fa-brands fa-youtube" id="icons-login"></i>
+                  <input type="url" placeholder="https://www.youtube.com/" id="you" [(ngModel)]="perfil.you" name="ABC">
+              </div>
+              <div class="input-contenedor">
+                  <i class="fa-solid fa-envelope" id="icons-login"></i>
+                  <input type="email" placeholder="example@gmail.com" id="email" required [(ngModel)]="perfil.email" name="ABC">
+              </div>
+              <div class="input-contenedor" style="color: white; border: 1px solid white;">
+                  Esto es un easter egg
+                  <button class="btn btn-outline-danger" id="clear" onclick="limpiar()">Limpiar</button>
+                  <button class="btn btn-outline-info" id="edit" (click)="edit()">Guardar</button>
+              </div>
+          </div>
+      </form>
+  </div>
