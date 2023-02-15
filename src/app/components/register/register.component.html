@@ -3,25 +3,25 @@
     <h1 class="login-title">Registrate</h1>
     <div class="contenedor">
       <div class="input-contenedor">
-        <i class="fas fa-user icon" id="icons-login"></i>
-        <input type="text" placeholder="Nombre de Usuario" />
-      </div>
-      <div class="input-contenedor">
         <i class="fas fa-envelope icon" id="icons-login"></i>
-        <input type="email" placeholder="Correo Electronico" />
+        <input type="email" placeholder="Correo Electronico" name="email" [(ngModel)]="email"/>
       </div>
       <div class="input-contenedor">
         <i class="fas fa-key icon" id="icons-login"></i>
-        <input type="password" placeholder="Contraseña" name="password" />
+        <input type="password" placeholder="Contraseña" name="password" [(ngModel)]="password"/>
       </div>
-      <input type="submit" value="Submit" class="button" />
+      <div class="input-contenedor">
+        <i class="fas fa-key icon" id="icons-login"></i>
+        <input type="password" placeholder="Repeat password" name="password" [(ngModel)]="confirmPassword"/>
+      </div>
+      <input type="submit" value="Submit" class="button" (click)="register()"/>
       <p>
         Al registrarte, aceptas nuestras Condiciones de uso y Política de
         privacidad.
       </p>
       <p>
         ¿Ya tienes una cuenta?
-        <a class="link" href="/register">Inicia Sesión</a>
+        <a class="link" href="/login">Inicia Sesión</a>
       </p>
     </div>
   </form>
